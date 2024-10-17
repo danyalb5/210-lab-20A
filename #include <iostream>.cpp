@@ -54,3 +54,18 @@ int main() {
     
 }
 
+int main() {
+    // Continue from previous segment
+
+    // Creating dynamic array of chair objects using default constructor
+    Chair* collection = new Chair[SIZE];
+    for (int i = 0; i < SIZE; i++) {
+        collection[i].print();
+    }
+
+    // Clean up
+    delete[] collection;
+    collection = nullptr;
+
+    return 0;
+}
