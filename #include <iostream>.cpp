@@ -34,3 +34,23 @@ public:
 
     // Existing methods unchanged for this segment...
 };
+
+int main() {
+    cout << fixed << setprecision(2);
+
+    // Testing default constructor
+    Chair* chairPtr = new Chair;
+    chairPtr->print();
+    delete chairPtr;
+    chairPtr = nullptr;
+
+    // Testing parameter constructor with data
+    double prices[] = {525.25, 434.34, 252.52};
+    Chair* livingChair = new Chair(3, prices);
+    livingChair->print();
+    delete livingChair;
+    livingChair = nullptr;
+
+    
+}
+
